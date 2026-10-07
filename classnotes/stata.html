@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Stata · Guadalupe Acra</title>
+
+    <meta
+        name="description"
+        content="Guadalupe Acra — Economics undergraduate at Universidad del Pacífico."
+    >
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="../assets/favicon.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/style.css"
+    >
+
+    <script
+        defer
+        src="../assets/site.js"
+    ></script>
+
+</head>
+
+<body>
+
+
+<header class="sitebar">
+
+    <div class="container nav">
+
+        <a class="brand" href="../index.html">
+            Guadalupe Acra
+        </a>
+
+        <button
+            class="menu"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <nav class="navlinks">
+            <a href="index.html" class="nav-link">Home</a><a href="../projects.html" class="nav-link">Projects</a><a href="../education.html" class="nav-link">Education &amp; Experience</a><a href="../arts/" class="nav-link">Arts</a><a href="../classnotes/" class="nav-link active">Classnotes</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<div class="container">
+
+    <section class="page-head">
+
+        <div class="breadcrumb">
+
+            <a href="../">
+                Classnotes
+            </a>
+
+            /
+            Stata
+
+        </div>
+
+
+        <h1>
+            Stata
+        </h1>
+
+
+        <p>
+            Data cleaning, merge/append, survey settings, descriptive statistics and regressions.
+        </p>
+
+    </section>
+
+
+    <section class="section">
+
+        <article class="prose">
+
+            
+        <h2>Typical workflow</h2>
+
+        <p>
+            <span class="inline-code">import</span>
+            →
+            inspect
+            →
+            clean
+            →
+            verify keys
+            →
+            merge / append
+            →
+            construct variables
+            →
+            <span class="inline-code">svyset</span>
+            →
+            estimate
+            →
+            test
+            →
+            export.
+        </p>
+
+        <h2>Core commands</h2>
+
+        <table class="table">
+            <tr>
+                <th>Task</th>
+                <th>Commands</th>
+            </tr>
+
+            <tr>
+                <td>Inspect</td>
+                <td>
+                    <code>codebook</code>,
+                    <code>summarize</code>,
+                    <code>misstable summarize</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Clean</td>
+                <td>
+                    <code>drop</code>,
+                    <code>replace</code>,
+                    <code>destring</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Keys</td>
+                <td>
+                    <code>isid</code>,
+                    <code>duplicates report</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Combine data</td>
+                <td>
+                    <code>append</code>,
+                    <code>merge</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Survey data</td>
+                <td>
+                    <code>svyset</code>,
+                    <code>svy:</code>
+                </td>
+            </tr>
+
+        </table>
+        
+
+        </article>
+
+    </section>
+
+</div>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-row">
+
+        <div>
+            © 2026 Guadalupe Acra · Lima, Peru
+        </div>
+
+        <div class="footer-links">
+
+            <a
+                href="https://github.com/guadalupeacra"
+                target="_blank"
+                rel="noreferrer"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="#"
+                title="Replace with your LinkedIn URL"
+            >
+                LinkedIn
+            </a>
+
+            <a href="mailto:YOUR_EMAIL@example.com">
+                Email
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
