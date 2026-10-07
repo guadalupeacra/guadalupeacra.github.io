@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stata — Applied Data Workflow · Guadalupe Acra</title>
+  <meta name="description" content="Guadalupe Acra — Economics undergraduate at Universidad del Pacífico, interested in economic consulting, labour economics, informality, development and data.">
+  <meta name="author" content="Guadalupe Acra">
+  <meta property="og:title" content="Stata — Applied Data Workflow · Guadalupe Acra">
+  <meta property="og:description" content="Economics · Strategy · Data · Research">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/site.js"></script>
+</head>
+<body data-page="notes">
+<header class="sitebar">
+  <div class="container nav">
+    <a class="brand" href="index.html" data-name>Guadalupe Acra</a>
+    <button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="navlinks">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="research.html" data-page="research">Research</a>
+      <a href="projects.html" data-page="projects">Projects</a>
+      <a href="education.html" data-page="education">Education &amp; Experience</a>
+      <a href="writing.html" data-page="writing">Writing &amp; Reflections</a>
+      <a href="notes.html" data-page="notes">Notes</a>
+      <a href="cv.html" data-page="cv">CV</a>
+    </nav>
+  </div>
+</header>
+<main><div class="container">
+  <section class="page-head"><h1>Stata — Applied Data Workflow</h1><p>Stata</p></section>
+  <section class="section"><article class="prose">
+<h2>Typical workflow</h2>
+<p><span class="inline-code">import</span> → inspect → clean → verify keys → merge/append → construct variables → <span class="inline-code">svyset</span> → estimate → test → export.</p>
+<h2>Core commands</h2>
+<table class="table"><tr><th>Task</th><th>Commands</th></tr>
+<tr><td>Inspect</td><td><code>codebook</code>, <code>summarize</code>, <code>misstable summarize</code></td></tr>
+<tr><td>Clean</td><td><code>drop</code>, <code>replace</code>, <code>destring</code></td></tr>
+<tr><td>Keys</td><td><code>isid</code>, <code>duplicates report</code></td></tr>
+<tr><td>Combine data</td><td><code>append</code>, <code>merge</code></td></tr>
+<tr><td>Survey data</td><td><code>svyset</code>, <code>svy:</code></td></tr></table>
+</article></section>
+</div></main>
+<footer>
+  <div class="container footer-row">
+    <div>© <span data-year></span> Guadalupe Acra · Lima, Peru</div>
+    <div class="footer-links">
+      <a data-github target="_blank" rel="noreferrer">GitHub</a>
+      <a data-linkedin target="_blank" rel="noreferrer">LinkedIn</a>
+      <a data-email>Email</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
