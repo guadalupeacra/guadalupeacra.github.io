@@ -2,9 +2,9 @@
 const config = {
   name: "Guadalupe Acra",
   shortName: "GA",
-  github: "YOUR_GITHUB_USERNAME",
-  linkedin: "https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/",
-  email: "YOUR_EMAIL@example.com",
+  github: "guadalupeacra",
+  linkedin: "https://www.linkedin.com/in/guadalupe-acra-ab8253309/",
+  email: "g.acrat@alum.up.edu.pe",
   cv: "assets/Guadalupe_Acra_CV.pdf",
   university: "Universidad del Pacífico",
   graduation: "2023–Present"
