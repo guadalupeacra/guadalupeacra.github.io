@@ -1,47 +1,138 @@
 
-/* ===== HOME: MINIMAL ACADEMIC PROFILE ===== */
+<!doctype html>
+<html lang="en">
 
-.hero {
-    min-height: auto;
-    padding: 76px 0 100px !important;
-}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-.hero-grid {
-    grid-template-columns: minmax(220px, 310px) minmax(0, 1fr);
-    align-items: center;
-    gap: 52px;
-}
+    <title>Guadalupe Acra | Economics</title>
 
-.avatar {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-}
+    <meta
+        name="description"
+        content="Guadalupe Acra, Economics undergraduate at Universidad del Pacífico, interested in labour economics, informality and economic development."
+    >
 
-.hero-copy {
-    max-width: 690px;
-}
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/site.js"></script>
+</head>
 
-.profile-note {
-    margin-top: 32px;
-    color: var(--wine);
-    font-size: 14px;
-    font-style: italic;
-}
+<body>
 
-@media (max-width: 760px) {
-    .hero {
-        padding: 42px 0 56px !important;
-    }
+    <header class="sitebar">
+        <div class="container nav">
 
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
+            <a class="brand" href="index.html">Guadalupe Acra</a>
 
-    .avatar {
-        width: min(100%, 260px);
-    }
-}
+            <button
+                class="menu"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                type="button"
+            >
+                ☰
+            </button>
+
+            <nav class="navlinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="classnotes/" class="nav-link">Class notes</a>
+                <a href="education.html#cv" class="nav-link">CV</a>
+                <a href="arts/" class="nav-link">Arts</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container hero-grid">
+
+                <div class="profile-image">
+                    <img
+                        class="avatar"
+                        src="assets/guadalupe-acra.jpg"
+                        alt="Portrait of Guadalupe Acra"
+                    >
+                </div>
+
+                <div class="hero-copy">
+
+                    <div class="eyebrow">
+                        Economics · Research · Strategy
+                    </div>
+
+                    <h1>Guadalupe Acra</h1>
+
+                    <div class="hero-title">
+                        Economics undergraduate at Universidad del Pacífico, Lima, Peru
+                    </div>
+
+                    <p>
+                        I study economics at Universidad del Pacífico. My academic
+                        interests include labour markets, informality, development
+                        economics and public policy.
+                    </p>
+
+                    <p>
+                        I am particularly interested in using economic theory,
+                        quantitative methods and empirical evidence to understand
+                        economic problems and develop practical solutions.
+                    </p>
+
+                    <div class="links">
+                        <a class="btn primary" href="education.html#cv">
+                            Curriculum vitae →
+                        </a>
+
+                        <a
+                            class="btn"
+                            href="https://github.com/guadalupeacra"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub ↗
+                        </a>
+                    </div>
+
+                    <p class="profile-note">
+                        Lima, Peru · Economics and applied research
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-row">
+
+            <div>
+                © 2026 Guadalupe Acra · Lima, Peru
+            </div>
+
+            <div class="footer-links">
+                <a
+                    href="https://github.com/guadalupeacra"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+
+                <a href="education.html#cv">CV</a>
+
+                <a href="arts/">Arts</a>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
