@@ -1,93 +1,167 @@
 
-/* ===== BURGUNDY ACADEMIC THEME ===== */
+/* ===== CLEAN BURGUNDY ACADEMIC THEME ===== */
 
 :root {
-  --ink: #292426;
-  --muted: #70666A;
-  --line: #DCD3D0;
-  --accent: #722F37;
-  --accent-dark: #4A1F27;
-  --paper: #FFFFFF;
-  --soft: #F7F4F2;
+    --ink: #292426;
+    --muted: #70666A;
+    --line: #DCD3D0;
+    --accent: #722F37;
+    --accent-dark: #4A1F27;
+    --paper: #FFFFFF;
+    --soft: #F7F4F2;
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
+    background: var(--paper) !important;
+    color: var(--ink);
 }
 
+/* Remove decorative background shapes */
+body::before,
+body::after,
+main::before,
+main::after,
+.hero::before,
+.hero::after,
+.hero-grid::before,
+.hero-grid::after {
+    content: none !important;
+    display: none !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+/* Navigation */
 .sitebar {
-  background: var(--paper);
-  border-bottom: 1px solid var(--line);
+    position: relative;
+    background: var(--paper) !important;
+    border-bottom: 1px solid var(--line);
+    box-shadow: none !important;
 }
 
 .brand {
-  color: var(--accent-dark);
+    color: var(--accent-dark);
 }
 
 .navlinks a {
-  color: var(--muted);
+    color: var(--muted);
+    text-decoration: none;
 }
 
 .navlinks a:hover,
 .navlinks a.active {
-  color: var(--accent);
+    color: var(--accent);
+}
+
+/* Main introduction */
+.hero {
+    position: relative;
+    min-height: 0 !important;
+    padding: 64px 0 48px !important;
+    background: var(--paper) !important;
+    overflow: visible !important;
+}
+
+.hero-grid {
+    align-items: start;
+    gap: 32px;
+}
+
+.hero-copy {
+    max-width: 680px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
 }
 
 .eyebrow {
-  color: var(--accent);
+    color: var(--accent) !important;
+}
+
+h1, h2, h3 {
+    color: var(--ink);
+    font-weight: 400;
+}
+
+h1, h2, h3,
+.brand {
+    font-family: Georgia, "Times New Roman", serif;
 }
 
 a {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 a:hover {
-  color: var(--accent-dark);
+    color: var(--accent-dark);
 }
 
+/* Simple links and buttons */
 .btn {
-  color: var(--accent);
-  border-color: var(--line);
-  background: var(--paper);
+    color: var(--accent);
+    border: 1px solid var(--line);
+    background: var(--paper);
+    border-radius: 2px;
+    box-shadow: none;
 }
 
 .btn:hover {
-  color: var(--accent-dark);
-  border-color: var(--accent);
+    color: var(--accent-dark);
+    border-color: var(--accent);
 }
 
 .btn.primary {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #FFFFFF;
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #FFFFFF;
 }
 
 .btn.primary:hover {
-  background: var(--accent-dark);
-  border-color: var(--accent-dark);
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
 }
 
-.section,
+/* Sections and academic lists */
+.section {
+    background: var(--paper) !important;
+    box-shadow: none !important;
+    border-color: var(--line);
+}
+
 .item {
-  border-color: var(--line);
+    border-color: var(--line);
 }
 
 .meta-col,
 .date,
 footer {
-  color: var(--muted);
+    color: var(--muted);
 }
 
 .footer-links a {
-  color: var(--muted);
+    color: var(--muted);
 }
 
 .footer-links a:hover {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 ::selection {
-  background: #E8D5D7;
-  color: var(--accent-dark);
+    background: #E8D5D7;
+    color: var(--accent-dark);
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    .hero {
+        padding: 40px 0 !important;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
