@@ -1,194 +1,47 @@
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+/* ===== HOME: MINIMAL ACADEMIC PROFILE ===== */
 
-    <title>Guadalupe Acra | Economics</title>
-    <meta name="description" content="Guadalupe Acra, Economics undergraduate at Universidad del Pacífico, interested in labour economics, informality and economic development.">
+.hero {
+    min-height: auto;
+    padding: 76px 0 100px !important;
+}
 
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="stylesheet" href="assets/style.css">
-    <script defer src="assets/site.js"></script>
-</head>
+.hero-grid {
+    grid-template-columns: minmax(220px, 310px) minmax(0, 1fr);
+    align-items: center;
+    gap: 52px;
+}
 
-<body>
+.avatar {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
 
-<header class="sitebar">
-    <div class="container nav">
-        <a class="brand" href="index.html">Guadalupe Acra</a>
+.hero-copy {
+    max-width: 690px;
+}
 
-        <button class="menu" aria-label="Open navigation" aria-expanded="false">
-            ☰
-        </button>
+.profile-note {
+    margin-top: 32px;
+    color: var(--wine);
+    font-size: 14px;
+    font-style: italic;
+}
 
-        <nav class="navlinks">
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="research.html" class="nav-link">Research</a>
-            <a href="projects.html" class="nav-link">Projects</a>
-            <a href="classnotes/" class="nav-link">Class notes</a>
-            <a href="education.html#cv" class="nav-link">CV</a>
-            <a href="arts/" class="nav-link">Arts</a>
-        </nav>
-    </div>
-</header>
+@media (max-width: 760px) {
+    .hero {
+        padding: 42px 0 56px !important;
+    }
 
-<main>
-    <section class="hero">
-        <div class="container hero-grid">
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
 
-            <div>
-                <img
-                    class="avatar"
-                    src="assets/guadalupe-acra.jpg"
-                    alt="Profile image"
-                >
-            </div>
-
-            <div class="hero-copy">
-                <div class="eyebrow">Economics · Research · Strategy</div>
-
-                <h1>Guadalupe Acra</h1>
-
-                <div class="hero-title">
-                    Economics undergraduate at Universidad del Pacífico, Lima, Peru
-                </div>
-
-                <p>
-                    I study economics at Universidad del Pacífico. My academic
-                    interests include labour markets, informality, development
-                    economics and public policy.
-                </p>
-
-                <p>
-                    I am particularly interested in using economic theory,
-                    quantitative methods and empirical evidence to understand
-                    economic problems and develop practical solutions.
-                </p>
-
-                <div class="links">
-                    <a class="btn primary" href="education.html#cv">Curriculum vitae</a>
-                    <a class="btn" href="https://github.com/guadalupeacra"
-                       target="_blank" rel="noreferrer">GitHub ↗</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2>Research interests</h2>
-
-            <p class="section-intro">
-                Labour economics · Informality and self-employment ·
-                Development economics · Public policy · Applied econometrics
-            </p>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="section-head">
-                <h2>Selected work</h2>
-                <a href="projects.html">All projects →</a>
-            </div>
-
-            <div class="item">
-                <div class="meta-col">Essay</div>
-                <div>
-                    <h3>
-                        <a href="projects/ensayos/">
-                            The Reinvention of Informality in Peru
-                        </a>
-                    </h3>
-                    <p>
-                        How digital platforms and social media are reshaping
-                        informal work.
-                    </p>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="meta-col">Empirical research</div>
-                <div>
-                    <h3>
-                        <a href="projects/trabajos-academicos/">
-                            Labour Income and Informality
-                        </a>
-                    </h3>
-                    <p>
-                        An empirical analysis using Peruvian household-survey data.
-                    </p>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="meta-col">Research project</div>
-                <div>
-                    <h3>
-                        <a href="projects/trabajos-academicos/">
-                            Sectoral Informality and GDP in Peru
-                        </a>
-                    </h3>
-                    <p>
-                        Panel-data analysis of informality and sectoral economic
-                        performance.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2>Academic resources</h2>
-
-            <div class="item">
-                <div class="meta-col">Course materials</div>
-                <div>
-                    <h3><a href="classnotes/">Class notes</a></h3>
-                    <p>Notes and materials from my economics courses.</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="meta-col">Education</div>
-                <div>
-                    <h3><a href="education.html">Education and experience</a></h3>
-                    <p>Academic background, experience and curriculum vitae.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="section-head">
-                <h2>Beyond economics</h2>
-                <a href="arts/">Arts and writing →</a>
-            </div>
-
-            <p class="section-intro">
-                A collection of essays, reflections and creative work.
-            </p>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <div class="container footer-row">
-        <div>© 2026 Guadalupe Acra · Lima, Peru</div>
-
-        <div class="footer-links">
-            <a href="https://github.com/guadalupeacra"
-               target="_blank" rel="noreferrer">GitHub</a>
-            <a href="education.html#cv">CV</a>
-            <a href="arts/">Arts</a>
-        </div>
-    </div>
-</footer>
-
-</body>
-</html>
+    .avatar {
+        width: min(100%, 260px);
+    }
+}
