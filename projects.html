@@ -1,175 +1,503 @@
+
 <!doctype html>
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
-
-    <title>Projects · Guadalupe Acra</title>
+    <title>Projects | Guadalupe Acra</title>
 
     <meta
         name="description"
-        content="Guadalupe Acra — Economics undergraduate at Universidad del Pacífico."
+        content="Selected academic projects, competition proposals and innovation initiatives by Guadalupe Acra, Economics undergraduate at Universidad del Pacífico."
     >
 
-    <link
-        rel="icon"
-        type="image/svg+xml"
-        href="assets/favicon.svg"
-    >
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/site.js"></script>
 
-    <link
-        rel="stylesheet"
-        href="assets/style.css"
-    >
+    <style>
+        /* ===== PROJECTS PAGE ===== */
 
-    <script
-        defer
-        src="assets/site.js"
-    ></script>
+        .page-head {
+            padding: 8px 0 30px;
+            border-bottom: 1px solid var(--wine-light);
+        }
+
+        .page-head h1 {
+            margin-bottom: 12px;
+        }
+
+        .page-head p {
+            max-width: 920px;
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.75;
+        }
+
+        .project-section {
+            padding: 38px 0 42px;
+            border: 0;
+            background: transparent;
+        }
+
+        .project-section + .project-section {
+            border-top: 1px solid var(--wine-light);
+        }
+
+        .project-section h2 {
+            margin: 0 0 8px;
+            font-size: 31px;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin: 0 0 22px;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .project-row {
+            display: grid;
+            grid-template-columns: 155px minmax(0, 1fr);
+            gap: 28px;
+            padding: 25px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .project-meta {
+            padding-top: 5px;
+            color: var(--wine);
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .project-category {
+            display: block;
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: 13px;
+            font-style: normal;
+            line-height: 1.6;
+        }
+
+        .project-row h3 {
+            margin: 0 0 5px;
+            font-size: 25px;
+        }
+
+        .project-row h3 a {
+            color: var(--wine);
+            text-decoration: none;
+        }
+
+        .project-row h3 a:hover {
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        .project-context {
+            margin: 0 0 10px;
+            color: var(--muted);
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        .project-description {
+            max-width: 760px;
+            margin: 0 0 13px;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 12px;
+        }
+
+        .project-tags span {
+            padding: 2px 9px;
+            border: 1px solid var(--line);
+            color: var(--wine);
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 5px;
+            padding-bottom: 2px;
+            border-bottom: 1px solid var(--wine-light);
+            color: var(--wine);
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            border-color: var(--wine);
+        }
+
+        @media (max-width: 760px) {
+            .page-head {
+                padding-bottom: 24px;
+            }
+
+            .page-head p {
+                font-size: 16px;
+            }
+
+            .project-section {
+                padding: 30px 0;
+            }
+
+            .project-section h2 {
+                font-size: 28px;
+            }
+
+            .project-row {
+                grid-template-columns: 1fr;
+                gap: 7px;
+                padding: 21px 0;
+            }
+
+            .project-meta {
+                padding: 0;
+            }
+
+            .project-category {
+                display: inline;
+                margin-left: 8px;
+            }
+
+            .project-row h3 {
+                font-size: 23px;
+            }
+        }
+    </style>
 
 </head>
 
 <body>
 
+    <header class="sitebar">
+        <div class="container nav">
 
-<header class="sitebar">
+            <a class="brand" href="index.html">
+                Guadalupe Acra
+            </a>
 
-    <div class="container nav">
+            <button
+                class="menu"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                type="button"
+            >
+                ☰
+            </button>
 
-        <a class="brand" href="index.html">
-            Guadalupe Acra
-        </a>
+            <nav class="navlinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="education.html" class="nav-link">Education &amp; Experience</a>
+                <a href="arts/" class="nav-link">Arts</a>
+                <a href="classnotes/" class="nav-link">Classnotes</a>
+            </nav>
 
-        <button
-            class="menu"
-            aria-label="Open navigation"
-            aria-expanded="false"
-        >
-            ☰
-        </button>
-
-        <nav class="navlinks">
-            <a href="index.html" class="nav-link">Home</a><a href="projects.html" class="nav-link active">Projects</a><a href="education.html" class="nav-link">Education &amp; Experience</a><a href="arts/" class="nav-link">Arts</a><a href="classnotes/" class="nav-link">Classnotes</a>
-        </nav>
-
-    </div>
-
-</header>
-
-
-<main>
-
-<div class="container">
-
-    <section class="page-head">
-
-        <h1>
-            Projects
-        </h1>
-
-        <p>
-            A structured archive of work I consider worth keeping public.
-            Projects are separated by the role they play in my academic
-            and professional portfolio.
-        </p>
-
-    </section>
+        </div>
+    </header>
 
 
-    <section class="section">
+    <main>
+        <div class="container">
 
-        <ul class="simple-list">
+            <!-- PAGE INTRODUCTION -->
 
-            <li>
+            <section class="page-head">
 
-                <a href="projects/ensayos/">
-                    ensayos/
+                <h1>Projects</h1>
+
+                <p>
+                    Selected academic work, competition proposals and
+                    innovation initiatives. Each project reflects how I
+                    approach a question, structure a problem and develop
+                    an analytical or practical response.
+                </p>
+
+            </section>
+
+
+            <!-- FEATURED PROJECTS -->
+
+            <section class="project-section">
+
+                <h2>Featured Projects</h2>
+
+                <p class="section-intro">
+                    Initiatives developed through innovation challenges,
+                    competitions and applied problem-solving.
+                </p>
+
+
+                <article class="project-row">
+
+                    <div class="project-meta">
+                        2026
+                        <span class="project-category">
+                            Competition proposal
+                        </span>
+                    </div>
+
+                    <div>
+
+                        <h3>Capital Consciente</h3>
+
+                        <p class="project-context">
+                            SBS · Financial Education Hackathon
+                        </p>
+
+                        <p class="project-description">
+                            A proposal to help young people prepare for
+                            retirement through interoperable micro-savings
+                            integrated into existing digital financial
+                            platforms. The concept combines small,
+                            recurring contributions with financial
+                            education and projections of future savings.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Financial inclusion</span>
+                            <span>Fintech</span>
+                            <span>Micro-savings</span>
+                            <span>Product design</span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-row">
+
+                    <div class="project-meta">
+                        2025
+                        <span class="project-category">
+                            University innovation
+                        </span>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            <a href="projects/trabajos-academicos/conova.html">
+                                CoNova
+                            </a>
+                        </h3>
+
+                        <p class="project-context">
+                            INNOVA UP · 2025-1
+                        </p>
+
+                        <p class="project-description">
+                            A university innovation project focused on
+                            translating an identified problem into a
+                            practical digital solution. The project
+                            received an honourable mention at INNOVA UP
+                            2025-1.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Innovation</span>
+                            <span>Problem-solving</span>
+                            <span>Digital solutions</span>
+                        </div>
+
+                        <a
+                            class="project-link"
+                            href="projects/trabajos-academicos/conova.html"
+                        >
+                            View project →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- ACADEMIC WORK -->
+
+            <section class="project-section">
+
+                <h2>Academic Work &amp; Writing</h2>
+
+                <p class="section-intro">
+                    Selected work from economics courses, quantitative
+                    analysis, empirical research and analytical writing.
+                </p>
+
+
+                <article class="project-row">
+
+                    <div class="project-meta">
+                        Applied economics
+                        <span class="project-category">
+                            R · ENAHO
+                        </span>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            <a href="projects/trabajos-academicos/labour-income-informality.html">
+                                Labour Income &amp; Informality
+                            </a>
+                        </h3>
+
+                        <p class="project-description">
+                            An empirical project examining factors associated
+                            with differences in labour income, using Peruvian
+                            household-survey data, data cleaning and
+                            regression models in a reproducible R workflow.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Empirical economics</span>
+                            <span>Data analysis</span>
+                            <span>R</span>
+                        </div>
+
+                        <a
+                            class="project-link"
+                            href="projects/trabajos-academicos/labour-income-informality.html"
+                        >
+                            View project →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-row">
+
+                    <div class="project-meta">
+                        Applied research
+                        <span class="project-category">
+                            Peru · Panel data
+                        </span>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            <a href="projects/trabajos-academicos/sectoral-informality-gdp.html">
+                                Sectoral Informality &amp; GDP in Peru
+                            </a>
+                        </h3>
+
+                        <p class="project-description">
+                            An applied economics project constructing a
+                            sector-level panel for Peru to analyse the
+                            relationship between labour informality and
+                            sectoral economic performance.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Econometrics</span>
+                            <span>Panel data</span>
+                            <span>Labour informality</span>
+                        </div>
+
+                        <a
+                            class="project-link"
+                            href="projects/trabajos-academicos/sectoral-informality-gdp.html"
+                        >
+                            View project →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="project-row">
+
+                    <div class="project-meta">
+                        Essays
+                        <span class="project-category">
+                            Analytical writing
+                        </span>
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            <a href="projects/ensayos/">
+                                Essays &amp; Competition Submissions
+                            </a>
+                        </h3>
+
+                        <p class="project-description">
+                            A collection of essays, competition submissions
+                            and longer-form analytical writing on topics
+                            including informality, digital platforms and
+                            labour markets.
+                        </p>
+
+                        <a
+                            class="project-link"
+                            href="projects/ensayos/"
+                        >
+                            Explore essays →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container footer-row">
+
+            <div>
+                © 2026 Guadalupe Acra · Lima, Peru
+            </div>
+
+            <div class="footer-links">
+
+                <a
+                    href="https://github.com/guadalupeacra"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
                 </a>
 
-                <span class="sub">
-                    Official essays, competition submissions and
-                    longer-form analytical writing.
-                </span>
-
-            </li>
-
-
-            <li>
-
-                <a href="projects/trabajos-academicos/">
-                    trabajos académicos/
+                <a
+                    href="#"
+                    title="Replace with your LinkedIn URL"
+                >
+                    LinkedIn
                 </a>
 
-                <span class="sub">
-                    Selected projects from university courses and
-                    academic work.
-                </span>
+                <a href="mailto:YOUR_EMAIL@example.com">
+                    Email
+                </a>
 
-            </li>
-
-        </ul>
-
-    </section>
-
-
-    <section class="section">
-
-        <div class="quote">
-
-            The standard is simple:
-            a project should make the question,
-            method and conclusion visible.
+            </div>
 
         </div>
-
-    </section>
-
-</div>
-
-</main>
-
-
-<footer>
-
-    <div class="container footer-row">
-
-        <div>
-            © 2026 Guadalupe Acra · Lima, Peru
-        </div>
-
-        <div class="footer-links">
-
-            <a
-                href="https://github.com/guadalupeacra"
-                target="_blank"
-                rel="noreferrer"
-            >
-                GitHub
-            </a>
-
-            <a
-                href="#"
-                title="Replace with your LinkedIn URL"
-            >
-                LinkedIn
-            </a>
-
-            <a href="mailto:YOUR_EMAIL@example.com">
-                Email
-            </a>
-
-        </div>
-
-    </div>
-
-</footer>
-
+    </footer>
 
 </body>
 
