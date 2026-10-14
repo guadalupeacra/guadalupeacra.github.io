@@ -19,7 +19,9 @@
             border-bottom: 1px solid var(--wine-light);
         }
 
-        .page-head h1 { margin-bottom: 12px; }
+        .page-head h1 {
+            margin-bottom: 12px;
+        }
 
         .page-head p {
             max-width: 920px;
@@ -129,13 +131,26 @@
             text-decoration: none;
         }
 
-        .project-link:hover { border-color: var(--wine); }
+        .project-link:hover {
+            border-color: var(--wine);
+        }
 
         @media (max-width: 760px) {
-            .page-head { padding-bottom: 24px; }
-            .page-head p { font-size: 16px; }
-            .project-section { padding: 30px 0; }
-            .project-section h2 { font-size: 28px; }
+            .page-head {
+                padding-bottom: 24px;
+            }
+
+            .page-head p {
+                font-size: 16px;
+            }
+
+            .project-section {
+                padding: 30px 0;
+            }
+
+            .project-section h2 {
+                font-size: 28px;
+            }
 
             .project-row {
                 grid-template-columns: 1fr;
@@ -143,14 +158,18 @@
                 padding: 21px 0;
             }
 
-            .project-meta { padding: 0; }
+            .project-meta {
+                padding: 0;
+            }
 
             .project-category {
                 display: inline;
                 margin-left: 8px;
             }
 
-            .project-row h3 { font-size: 23px; }
+            .project-row h3 {
+                font-size: 23px;
+            }
         }
     </style>
 </head>
@@ -160,7 +179,12 @@
         <div class="container nav">
             <a class="brand" href="index.html">Guadalupe Acra</a>
 
-            <button class="menu" aria-label="Open navigation" aria-expanded="false" type="button">
+            <button
+                class="menu"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                type="button"
+            >
                 ☰
             </button>
 
@@ -190,6 +214,7 @@
             <!-- FEATURED PROJECTS -->
             <section class="project-section">
                 <h2>Featured Projects</h2>
+
                 <p class="section-intro">
                     Initiatives developed through innovation challenges, competitions
                     and applied problem-solving.
@@ -203,7 +228,9 @@
 
                     <div>
                         <h3>Capital Consciente</h3>
-                        <p class="project-context">SBS · Financial Education Hackathon</p>
+                        <p class="project-context">
+                            SBS · Financial Education Hackathon
+                        </p>
 
                         <p class="project-description">
                             A proposal to help young people prepare for retirement through
@@ -246,7 +273,10 @@
                             <span>Digital solutions</span>
                         </div>
 
-                        <a class="project-link" href="projects/trabajos-academicos/conova.html">
+                        <a
+                            class="project-link"
+                            href="projects/trabajos-academicos/conova.html"
+                        >
                             View project →
                         </a>
                     </div>
@@ -307,6 +337,7 @@
                     </div>
                 </article>
 
+                <!-- LABOUR INCOME PROJECT -->
                 <article class="project-row">
                     <div class="project-meta">
                         Applied economics
@@ -332,12 +363,16 @@
                             <span>R</span>
                         </div>
 
-                        <a class="project-link" href="projects/trabajos-academicos/labour-income-informality.html">
+                        <a
+                            class="project-link"
+                            href="projects/trabajos-academicos/labour-income-informality.html"
+                        >
                             View project →
                         </a>
                     </div>
                 </article>
 
+                <!-- SECTORAL INFORMALITY PROJECT -->
                 <article class="project-row">
                     <div class="project-meta">
                         Applied research
@@ -363,34 +398,15 @@
                             <span>Labour informality</span>
                         </div>
 
-                        <a class="project-link" href="projects/trabajos-academicos/sectoral-informality-gdp.html">
+                        <a
+                            class="project-link"
+                            href="projects/trabajos-academicos/sectoral-informality-gdp.html"
+                        >
                             View project →
                         </a>
                     </div>
                 </article>
 
-                <article class="project-row">
-                    <div class="project-meta">
-                        Essays
-                        <span class="project-category">Analytical writing</span>
-                    </div>
-
-                    <div>
-                        <h3>
-                            <a href="projects/Ensayos/">Essays &amp; Competition Submissions</a>
-                        </h3>
-
-                        <p class="project-description">
-                            A collection of essays, competition submissions and longer-form
-                            analytical writing on topics including informality, digital platforms
-                            and labour markets.
-                        </p>
-
-                        <a class="project-link" href="projects/Ensayos/">
-                            Explore essays →
-                        </a>
-                    </div>
-                </article>
             </section>
         </div>
     </main>
@@ -400,9 +416,14 @@
             <div>© 2026 Guadalupe Acra · Lima, Peru</div>
 
             <div class="footer-links">
-                <a href="https://github.com/guadalupeacra" target="_blank" rel="noopener noreferrer">
+                <a
+                    href="https://github.com/guadalupeacra"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     GitHub
                 </a>
+
                 <a href="#" title="Replace with your LinkedIn URL">LinkedIn</a>
                 <a href="mailto:YOUR_EMAIL@example.com">Email</a>
             </div>
