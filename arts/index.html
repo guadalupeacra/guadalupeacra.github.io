@@ -1,160 +1,466 @@
+
 <!doctype html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
-
-    <title>Arts · Guadalupe Acra</title>
-
+    <title>Arts | Guadalupe Acra</title>
     <meta
         name="description"
-        content="Guadalupe Acra — Economics undergraduate at Universidad del Pacífico."
+        content="A personal creative gallery of paintings, writing, poetry and reflections on art, literature, film and music by Guadalupe Acra."
     >
 
-    <link
-        rel="icon"
-        type="image/svg+xml"
-        href="../assets/favicon.svg"
-    >
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script defer src="../assets/site.js"></script>
 
-    <link
-        rel="stylesheet"
-        href="../assets/style.css"
-    >
+    <style>
+        /* ===== ARTS: PERSONAL CREATIVE GALLERY ===== */
+        .arts-intro {
+            padding: 8px 0 30px;
+            border-bottom: 1px solid var(--wine-light);
+        }
 
-    <script
-        defer
-        src="../assets/site.js"
-    ></script>
+        .arts-kicker {
+            margin: 0 0 10px;
+            color: var(--wine);
+            font-size: 12px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
 
+        .arts-intro h1 {
+            margin: 0 0 12px;
+        }
+
+        .arts-intro p:last-child {
+            max-width: 900px;
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.75;
+        }
+
+        .gallery-heading {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 30px 0 18px;
+        }
+
+        .gallery-heading h2 {
+            margin: 0;
+            font-size: 29px;
+        }
+
+        .gallery-heading p {
+            max-width: 520px;
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: 24px;
+            align-items: start;
+            padding-bottom: 44px;
+        }
+
+        .gallery-card {
+            min-width: 0;
+            border-bottom: 1px solid var(--wine-light);
+            padding-bottom: 22px;
+        }
+
+        .gallery-card--wide { grid-column: span 7; }
+        .gallery-card--narrow { grid-column: span 5; }
+        .gallery-card--half { grid-column: span 6; }
+
+        .piece-cover {
+            position: relative;
+            display: flex;
+            width: 100%;
+            min-height: 260px;
+            overflow: hidden;
+            align-items: flex-end;
+            padding: 25px;
+            margin-bottom: 17px;
+            color: var(--wine);
+            background: #eee5d9;
+            text-decoration: none;
+        }
+
+        .piece-cover:focus-visible,
+        .piece-title a:focus-visible,
+        .piece-link:focus-visible {
+            outline: 2px solid var(--wine);
+            outline-offset: 4px;
+        }
+
+        .piece-cover--ambiguity {
+            min-height: 330px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:
+                radial-gradient(ellipse at 15% 85%, rgba(124, 38, 52, .12), transparent 42%),
+                #f0e5d9;
+        }
+
+        .piece-cover--ambiguity::before {
+            position: absolute;
+            top: 18%;
+            left: 12%;
+            width: 76%;
+            height: 64%;
+            border: 1px solid rgba(117, 36, 50, .3);
+            content: "";
+        }
+
+        .cover-typography {
+            position: relative;
+            z-index: 1;
+            max-width: 360px;
+        }
+
+        .cover-typography .cover-label,
+        .cover-label {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 11px;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        .cover-typography strong {
+            display: block;
+            font-size: clamp(35px, 4.4vw, 58px);
+            font-weight: 400;
+            line-height: .98;
+        }
+
+        .cover-typography em {
+            display: block;
+            margin-top: 14px;
+            font-size: 15px;
+        }
+
+        .piece-cover--fragments {
+            min-height: 260px;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(ellipse at 75% 24%, rgba(117, 36, 50, .22), transparent 34%),
+                radial-gradient(ellipse at 20% 80%, rgba(95, 109, 124, .19), transparent 38%),
+                #e8e1df;
+        }
+
+        .fragments-note {
+            position: relative;
+            max-width: 340px;
+            padding: 28px 22px;
+            border-top: 1px solid rgba(117, 36, 50, .45);
+            border-bottom: 1px solid rgba(117, 36, 50, .45);
+            color: var(--wine);
+            font-size: clamp(25px, 3vw, 38px);
+            font-style: italic;
+            line-height: 1.15;
+            text-align: center;
+        }
+
+        .piece-cover--visual {
+            min-height: 330px;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            background:
+                radial-gradient(ellipse at 70% 35%, rgba(113, 43, 53, .42), transparent 27%),
+                radial-gradient(ellipse at 35% 62%, rgba(175, 134, 102, .58), transparent 29%),
+                radial-gradient(ellipse at 77% 78%, rgba(78, 90, 98, .4), transparent 31%),
+                #ded1c1;
+        }
+
+        .piece-cover--visual::after {
+            position: absolute;
+            top: 18%;
+            right: 14%;
+            bottom: 15%;
+            left: 18%;
+            border: 1px solid rgba(250, 247, 241, .72);
+            content: "";
+            transform: rotate(-5deg);
+        }
+
+        .visual-cover-title {
+            position: relative;
+            z-index: 1;
+            max-width: 240px;
+            font-size: 31px;
+            line-height: 1.05;
+        }
+
+        .visual-cover-title small {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 10px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+
+        .piece-type {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--wine);
+            font-size: 12px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .piece-title {
+            margin: 0 0 7px;
+            font-size: 25px;
+            line-height: 1.2;
+        }
+
+        .piece-title a {
+            color: var(--wine);
+            text-decoration: none;
+        }
+
+        .piece-title a:hover {
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        .piece-description {
+            max-width: 640px;
+            margin: 0 0 10px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .piece-link {
+            display: inline-block;
+            margin-top: 3px;
+            padding-bottom: 2px;
+            border-bottom: 1px solid var(--wine-light);
+            color: var(--wine);
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        .piece-link:hover {
+            border-color: var(--wine);
+        }
+
+        .gallery-note {
+            margin: 0 0 36px;
+            padding: 22px 0 0;
+            border-top: 1px solid var(--wine-light);
+            color: var(--muted);
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 760px) {
+            .arts-intro { padding-bottom: 24px; }
+            .arts-intro p:last-child { font-size: 16px; }
+
+            .gallery-heading {
+                display: block;
+                padding-top: 25px;
+            }
+
+            .gallery-heading h2 {
+                margin-bottom: 7px;
+                font-size: 26px;
+            }
+
+            .gallery-grid { gap: 27px; }
+
+            .gallery-card--wide,
+            .gallery-card--narrow,
+            .gallery-card--half {
+                grid-column: 1 / -1;
+            }
+
+            .piece-cover,
+            .piece-cover--ambiguity,
+            .piece-cover--visual {
+                min-height: 260px;
+            }
+
+            .cover-typography strong { font-size: 48px; }
+            .piece-title { font-size: 23px; }
+        }
+    </style>
 </head>
 
 <body>
+    <header class="sitebar">
+        <div class="container nav">
+            <a class="brand" href="../index.html">Guadalupe Acra</a>
 
-
-<header class="sitebar">
-
-    <div class="container nav">
-
-        <a class="brand" href="../index.html">
-            Guadalupe Acra
-        </a>
-
-        <button
-            class="menu"
-            aria-label="Open navigation"
-            aria-expanded="false"
-        >
-            ☰
-        </button>
-
-        <nav class="navlinks">
-            <a href="index.html" class="nav-link">Home</a><a href="../projects.html" class="nav-link">Projects</a><a href="../education.html" class="nav-link">Education &amp; Experience</a><a href="../arts/" class="nav-link active">Arts</a><a href="../classnotes/" class="nav-link">Classnotes</a>
-        </nav>
-
-    </div>
-
-</header>
-
-
-<main>
-
-<div class="container">
-
-    <section class="page-head">
-
-        <h1>
-            Arts
-        </h1>
-
-        <p>
-            A quieter part of the site: reflections, prose, poetry
-            and other writing that belongs to the way I think and observe.
-        </p>
-
-    </section>
-
-
-    <section class="section">
-
-        <ul class="simple-list">
-
-            <li>
-
-                <a href="on-ambiguity.html">
-                    On Ambiguity
-                </a>
-
-                <span class="sub">
-                    Reflection · 2026
-                </span>
-
-            </li>
-
-
-            <li>
-
-                <a href="creative-fragments.html">
-                    Creative Fragments
-                </a>
-
-                <span class="sub">
-                    Prose / literary notebook
-                </span>
-
-            </li>
-
-        </ul>
-
-    </section>
-
-</div>
-
-</main>
-
-
-<footer>
-
-    <div class="container footer-row">
-
-        <div>
-            © 2026 Guadalupe Acra · Lima, Peru
-        </div>
-
-        <div class="footer-links">
-
-            <a
-                href="https://github.com/guadalupeacra"
-                target="_blank"
-                rel="noreferrer"
+            <button
+                class="menu"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                type="button"
             >
-                GitHub
-            </a>
+                ☰
+            </button>
 
-            <a
-                href="#"
-                title="Replace with your LinkedIn URL"
-            >
-                LinkedIn
-            </a>
-
-            <a href="mailto:YOUR_EMAIL@example.com">
-                Email
-            </a>
-
+            <nav class="navlinks">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../projects.html" class="nav-link">Projects</a>
+                <a href="../education.html" class="nav-link">Education &amp; Experience</a>
+                <a href="./" class="nav-link active">Arts</a>
+                <a href="../classnotes/" class="nav-link">Classnotes</a>
+            </nav>
         </div>
+    </header>
 
-    </div>
+    <main>
+        <div class="container">
+            <section class="arts-intro">
+                <p class="arts-kicker">A personal creative archive</p>
+                <h1>Arts</h1>
+                <p>
+                    A gallery of things I create, notice and interpret — paintings,
+                    fragments of writing, and reflections on art, literature, film and music.
+                </p>
+            </section>
 
-</footer>
+            <div class="gallery-heading">
+                <h2>Selected pieces</h2>
+                <p>Different forms, one ongoing conversation with the world.</p>
+            </div>
 
+            <section class="gallery-grid" aria-label="Creative works">
 
+                <article class="gallery-card gallery-card--wide">
+                    <a
+                        class="piece-cover piece-cover--ambiguity"
+                        href="on-ambiguity.html"
+                        aria-label="Read On Ambiguity"
+                    >
+                        <span class="cover-typography">
+                            <span class="cover-label">Reflection · 2026</span>
+                            <strong>On<br>Ambiguity</strong>
+                            <em>Between certainty and interpretation</em>
+                        </span>
+                    </a>
+
+                    <span class="piece-type">Reflection · Writing</span>
+                    <h3 class="piece-title">
+                        <a href="on-ambiguity.html">On Ambiguity</a>
+                    </h3>
+
+                    <p class="piece-description">
+                        A reflection on uncertainty, interpretation and the meanings
+                        that emerge when things resist a single answer.
+                    </p>
+
+                    <a class="piece-link" href="on-ambiguity.html">Read piece ↗</a>
+                </article>
+
+                <article class="gallery-card gallery-card--narrow">
+                    <div
+                        class="piece-cover piece-cover--visual"
+                        role="img"
+                        aria-label="Abstract placeholder cover for future paintings and visual studies"
+                    >
+                        <span class="cover-label">Visual archive</span>
+                        <span class="visual-cover-title">
+                            <small>Paintings · Sketches · Studies</small>
+                            A space for visual work
+                        </span>
+                    </div>
+
+                    <span class="piece-type">Visual art</span>
+                    <h3 class="piece-title">Paintings &amp; Studies</h3>
+                    <p class="piece-description">
+                        Paintings, sketches and experiments in colour and form.
+                        This space will grow as new works are added to the gallery.
+                    </p>
+                </article>
+
+                <article class="gallery-card gallery-card--narrow">
+                    <a
+                        class="piece-cover piece-cover--fragments"
+                        href="creative-fragments.html"
+                        aria-label="Explore Creative Fragments"
+                    >
+                        <span class="fragments-note">
+                            “Fragments of thought, waiting to become something else.”
+                        </span>
+                    </a>
+
+                    <span class="piece-type">Prose · Poetry</span>
+                    <h3 class="piece-title">
+                        <a href="creative-fragments.html">Creative Fragments</a>
+                    </h3>
+
+                    <p class="piece-description">
+                        A literary notebook for short prose, poetry, unfinished ideas
+                        and observations worth keeping.
+                    </p>
+
+                    <a class="piece-link" href="creative-fragments.html">
+                        Explore notebook ↗
+                    </a>
+                </article>
+
+                <article class="gallery-card gallery-card--wide">
+                    <div
+                        class="piece-cover piece-cover--visual"
+                        role="img"
+                        aria-label="Abstract cover representing interpretations of literature, cinema and music"
+                    >
+                        <span class="cover-label">Culture &amp; interpretation</span>
+                        <span class="visual-cover-title">
+                            <small>Literature · Film · Music</small>
+                            Reading between the lines
+                        </span>
+                    </div>
+
+                    <span class="piece-type">Essays · Interpretations</span>
+                    <h3 class="piece-title">Works That Stay With Me</h3>
+                    <p class="piece-description">
+                        Notes and personal interpretations of books, films, songs and
+                        other works — what they express, what they leave unsaid, and why
+                        they remain with us.
+                    </p>
+                </article>
+
+            </section>
+
+            <p class="gallery-note">
+                This gallery is a work in progress. Some pieces begin as words, others as images;
+                the collection will evolve as new work finds its place here.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-row">
+            <div>© 2026 Guadalupe Acra · Lima, Peru</div>
+
+            <div class="footer-links">
+                <a
+                    href="https://github.com/guadalupeacra"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >GitHub</a>
+
+                <a href="#" title="Replace with your LinkedIn URL">LinkedIn</a>
+                <a href="mailto:YOUR_EMAIL@example.com">Email</a>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
