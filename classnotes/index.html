@@ -1,220 +1,296 @@
+
 <!doctype html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
-
-    <title>Microeconomics II · Guadalupe Acra</title>
-
+    <title>Classnotes | Guadalupe Acra</title>
     <meta
         name="description"
-        content="Class notes for Microeconomics II by Guadalupe Acra."
+        content="Class notes and study materials from courses at Universidad del Pacífico, covering economics, quantitative methods and related subjects."
     >
 
-    <link
-        rel="icon"
-        type="image/svg+xml"
-        href="../../assets/favicon.svg"
-    >
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../assets/style.css">
+    <script defer src="../assets/site.js"></script>
 
-    <link
-        rel="stylesheet"
-        href="../../assets/style.css"
-    >
+    <style>
+        /* ===== CLASSNOTES PAGE: MATCHES PROJECTS ===== */
+        .page-head {
+            padding: 8px 0 30px;
+            border-bottom: 1px solid var(--wine-light);
+        }
 
-    <script
-        defer
-        src="../../assets/site.js"
-    ></script>
+        .page-head h1 {
+            margin-bottom: 12px;
+        }
 
+        .page-head p {
+            max-width: 920px;
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.75;
+        }
+
+        .notes-section {
+            padding: 38px 0 42px;
+            border: 0;
+            background: transparent;
+        }
+
+        .notes-section + .notes-section {
+            border-top: 1px solid var(--wine-light);
+        }
+
+        .notes-section h2 {
+            margin: 0 0 8px;
+            font-size: 31px;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin: 0 0 22px;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .note-row {
+            display: grid;
+            grid-template-columns: 155px minmax(0, 1fr);
+            gap: 28px;
+            padding: 25px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .note-meta {
+            padding-top: 5px;
+            color: var(--wine);
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .note-category {
+            display: block;
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: 13px;
+            font-style: normal;
+            line-height: 1.6;
+        }
+
+        .note-row h3 {
+            margin: 0 0 7px;
+            font-size: 25px;
+        }
+
+        .note-row h3 a {
+            color: var(--wine);
+            text-decoration: none;
+        }
+
+        .note-row h3 a:hover {
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        .note-description {
+            max-width: 760px;
+            margin: 0 0 13px;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .note-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 12px;
+        }
+
+        .note-tags span {
+            padding: 2px 9px;
+            border: 1px solid var(--line);
+            color: var(--wine);
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .note-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding-bottom: 2px;
+            border-bottom: 1px solid var(--wine-light);
+            color: var(--wine);
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        .note-link:hover {
+            border-color: var(--wine);
+        }
+
+        .notes-footnote {
+            max-width: 760px;
+            margin: 22px 0 0;
+            color: var(--muted);
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 760px) {
+            .page-head {
+                padding-bottom: 24px;
+            }
+
+            .page-head p {
+                font-size: 16px;
+            }
+
+            .notes-section {
+                padding: 30px 0;
+            }
+
+            .notes-section h2 {
+                font-size: 28px;
+            }
+
+            .note-row {
+                grid-template-columns: 1fr;
+                gap: 7px;
+                padding: 21px 0;
+            }
+
+            .note-meta {
+                padding: 0;
+            }
+
+            .note-category {
+                display: inline;
+                margin-left: 8px;
+            }
+
+            .note-row h3 {
+                font-size: 23px;
+            }
+        }
+    </style>
 </head>
 
-
 <body>
+    <header class="sitebar">
+        <div class="container nav">
+            <a class="brand" href="../index.html">Guadalupe Acra</a>
 
-
-<header class="sitebar">
-
-    <div class="container nav">
-
-
-        <a
-            class="brand"
-            href="../../index.html"
-        >
-            Guadalupe Acra
-        </a>
-
-
-        <button
-            class="menu"
-            aria-label="Open navigation"
-            aria-expanded="false"
-        >
-            ☰
-        </button>
-
-
-        <nav class="navlinks">
-
-
-            <a href="../../index.html">
-                Home
-            </a>
-
-
-            <a href="../../projects.html">
-                Projects
-            </a>
-
-
-            <a href="../../education.html">
-                Education &amp; Experience
-            </a>
-
-
-            <a href="../../arts/">
-                Arts
-            </a>
-
-
-            <a
-                href="../"
-                class="active"
+            <button
+                class="menu"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                type="button"
             >
-                Classnotes
-            </a>
+                ☰
+            </button>
 
+            <nav class="navlinks">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../projects.html" class="nav-link">Projects</a>
+                <a href="../education.html" class="nav-link">Education &amp; Experience</a>
+                <a href="../arts/" class="nav-link">Arts</a>
+                <a href="./" class="nav-link active">Classnotes</a>
+            </nav>
+        </div>
+    </header>
 
-        </nav>
+    <main>
+        <div class="container">
 
-    </div>
+            <!-- PAGE INTRODUCTION -->
+            <section class="page-head">
+                <h1>Classnotes</h1>
 
-</header>
+                <p>
+                    A collection of class notes and study materials from a range
+                    of courses at Universidad del Pacífico. These materials are
+                    shared to support learning, review key concepts and make
+                    course content easier to revisit.
+                </p>
+            </section>
 
+            <!-- MICROECONOMICS II -->
+            <section class="notes-section">
+                <h2>Microeconomics II</h2>
 
+                <p class="section-intro">
+                    Notes and study materials on microeconomic theory
+                    and strategic interaction.
+                </p>
 
-<main>
+                <article class="note-row">
+                    <div class="note-meta">
+                        2026
+                        <span class="note-category">Lecture notes · PDF</span>
+                    </div>
 
+                    <div>
+                        <h3>
+                            <a
+                                href="teoria-de-juegos-1.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Teoría de Juegos 1
+                            </a>
+                        </h3>
 
-<section class="page-head">
+                        <p class="note-description">
+                            Class notes for Microeconomics II. Open the PDF
+                            to review the material.
+                        </p>
 
-    <div class="container">
+                        <div class="note-tags">
+                            <span>Microeconomic theory</span>
+                            <span>Game theory</span>
+                        </div>
 
+                        <a
+                            class="note-link"
+                            href="teoria-de-juegos-1.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Open notes (PDF) ↗
+                        </a>
+                    </div>
+                </article>
 
-        <div class="breadcrumb">
+                <p class="notes-footnote">
+                    More notes will be added as additional course materials
+                    are prepared for sharing.
+                </p>
+            </section>
 
-            <a href="../">
-                Classnotes
-            </a>
-
-            /
-
-            Microeconomics II
+            <!-- ADD NEW COURSE SECTIONS HERE -->
 
         </div>
+    </main>
 
+    <footer>
+        <div class="container footer-row">
+            <div>© 2026 Guadalupe Acra · Lima, Peru</div>
 
-        <h1>
-            Microeconomics II
-        </h1>
+            <div class="footer-links">
+                <a
+                    href="https://github.com/guadalupeacra"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >GitHub</a>
 
-
-        <p>
-            Lecture notes and study materials from
-            Microeconomics II.
-        </p>
-
-
-    </div>
-
-</section>
-
-
-
-<section class="section">
-
-    <div class="container">
-
-
-        <ul class="simple-list">
-
-
-            <li>
-
-                <a href="teoria-de-juegos-1.pdf">
-                    Teoría de Juegos 1
-                </a>
-
-
-                <span class="sub">
-                    Apuntes de clase · Guadalupe Acra · 2026
-                </span>
-
-            </li>
-
-
-        </ul>
-
-
-    </div>
-
-</section>
-
-
-</main>
-
-
-
-<footer>
-
-    <div class="container footer-row">
-
-
-        <div>
-            © 2026 Guadalupe Acra · Lima, Peru
+                <a href="../education.html#cv">CV</a>
+                <a href="../arts/">Arts</a>
+            </div>
         </div>
-
-
-        <div class="footer-links">
-
-
-            <a
-                href="https://github.com/guadalupeacra"
-                target="_blank"
-                rel="noreferrer"
-            >
-                GitHub
-            </a>
-
-
-            <a
-                href="#"
-                title="Replace with your LinkedIn URL"
-            >
-                LinkedIn
-            </a>
-
-
-            <a href="mailto:YOUR_EMAIL@example.com">
-                Email
-            </a>
-
-
-        </div>
-
-
-    </div>
-
-</footer>
-
-
+    </footer>
 </body>
-
 </html>
